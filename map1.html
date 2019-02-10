@@ -18,6 +18,7 @@ window.onload = function() {
 	map.panTo([ 35.943560,136.188917 ]) // 鯖江駅
 	map.addIcon( 35.943560, 136.188917, " 鯖江駅")
 	map.addIcon( 35.944571, 136.186228, "Hana道場", "icon-megane.png", 64)
+	map.addIcon(lat, lng, name, "icon-carparking.png", 64, 64)
 	
 	// SPARQLクエリー
 	var query = `
@@ -27,8 +28,7 @@ window.onload = function() {
 			?uri ic:名称 [ ic:表記 ?name ].
 			?uri ic:地理座標 [ ic:緯度 ?lat; ic:経度 ?lng; ].
 			filter(contains(str(?name),'駐車場'))
-		map.addIcon(lat, lng, name, "icon-carparking.png", 64, 64)
-
+		
 		} limit 100
 	`
 	
