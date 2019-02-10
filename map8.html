@@ -1,0 +1,35 @@
+<!DOCTYPE html><html lang="ja">
+<head>
+<meta charset='utf-8'/>
+<title>バスマップ</title>
+<link rel="apple-touch-icon" href="app-icon.png"/>
+<meta property="og:image" conect="ogp-image.jpg"/>
+<link rel="stylesheet" href="https://unpkg.com/leflet@1.4.0/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+<script src="https://code4fukui.github.io/egmapjs/egmap.js"></script>
+<link rel="stylesheet" href="https://code4fukui.github.io/egmapjs/egmap.css"/>
+<script src="https://fukuno.jig.jp/fukuno.js"></script>
+<script src="https://code4fukui.github.io/egmapjs/sparql.js"></script>
+<sprict>"use strict"
+
+window.onload = function(){
+var map = initMap('mapid')
+map.setZoom(16)
+map.panTo([ 36.06165,136.223546])//福井駅
+
+map.addIcon(36.062263,136.222962,"福井駅")
+map.addIcon(36.062782,136.216431,"東映前")
+map.addIcon(36.063251,136.21402,"片町入口")
+}
+</script>
+<style>
+
+body{margin: 0; font-family: sans-serif; text-align:center;}
+h1{font-size: 5vw; margin: 0;}
+#mapid{ height: 60vh; }
+</style></head><body>
+
+<h1>バスマップ</h1>
+<div id="mapid"></div>
+
+</body></html>
